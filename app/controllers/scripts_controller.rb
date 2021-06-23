@@ -9,6 +9,7 @@ class ScriptsController < ApplicationController
 
   # GET /scripts/1 or /scripts/1.json
   def show
+    @step = @script.steps.build
   end
 
   # GET /scripts/new

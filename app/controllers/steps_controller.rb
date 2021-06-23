@@ -26,7 +26,7 @@ class StepsController < ApplicationController
     @step = @script.steps.build(step_params)
 
     if @step.save
-      redirect_to([@step.script, @step], notice: 'Step was successfully added.')
+      redirect_to(@step.script)
     else
       render action: 'new'
     end
@@ -35,7 +35,7 @@ class StepsController < ApplicationController
   # PUT scripts/1/steps/1
   def update
     if @step.update_attributes(step_params)
-      redirect_to([@step.script, @step], notice: 'Step was successfully updated.')
+      redirect_to(@step.script)
     else
       render action: 'edit'
     end
@@ -45,7 +45,7 @@ class StepsController < ApplicationController
   def destroy
     @step.destroy
 
-    redirect_to script_steps_url(@script)
+    redirect_to @script
   end
 
   private

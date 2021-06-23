@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<p>Step for <%= @step.script.name %></p>
 <p>
   <b>Name:</b>
   <%= @step.name %>
@@ -40,10 +40,6 @@
   <%= @step.dateTested %>
 </p>
 
-<p>
-  <b>Script:</b>
-  <%= @step.script %>
-</p>
 
 
 <%= link_to 'Edit', edit_script_step_path(@step.script, @step) %> |

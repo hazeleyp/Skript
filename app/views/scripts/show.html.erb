@@ -38,6 +38,12 @@
 <%= link_to 'Edit', edit_script_path(@script) %> |
 <%= link_to 'Back', scripts_path %>
 
+<hr>
+<h1>Add a step</h1>
+
+<%= render 'steps/form' %>
+<hr>
+
 <h1>Steps</h1>
 
 <table>
@@ -50,13 +56,13 @@
     <th>Testdepartment</th>
     <th>Linkedissue</th>
     <th>Datetested</th>
-    <th>Script</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @script.steps.each do |step| %>
+<% if step.persisted? %>
   <tr>
     <td><%= step.name %></td>
     <td><%= step.description %></td>
@@ -66,11 +72,11 @@
     <td><%= step.testDepartment %></td>
     <td><%= step.linkedIssue %></td>
     <td><%= step.dateTested %></td>
-    <td><%= step.script %></td>
     <td><%= link_to 'Show', [step.script, step] %></td>
     <td><%= link_to 'Edit', edit_script_step_path(step.script, step) %></td>
     <td><%= link_to 'Destroy', [step.script, step], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
+  <%end%>
 <% end %>
 </table>
 
