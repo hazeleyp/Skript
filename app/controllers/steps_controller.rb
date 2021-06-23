@@ -26,7 +26,7 @@ class StepsController < ApplicationController
     @step = @script.steps.build(step_params)
 
     if @step.save
-      redirect_to([@step.script, @step], notice: 'Step was successfully created.')
+      redirect_to([@step.script, @step], notice: 'Step was successfully added.')
     else
       render action: 'new'
     end
