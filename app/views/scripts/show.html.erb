@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @script.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @script.description %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @script.status %>
+</p>
+
+<p>
+  <strong>Context:</strong>
+  <%= @script.context %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @script.version %>
+</p>
+
+<p>
+  <strong>Owningapp:</strong>
+  <%= @script.owningApp %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @script.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_script_path(@script) %> |
+<%= link_to 'Back', scripts_path %>

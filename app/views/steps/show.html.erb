@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @step.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @step.description %>
+</p>
+
+<p>
+  <b>Expectedoutcome:</b>
+  <%= @step.expectedOutcome %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @step.status %>
+</p>
+
+<p>
+  <b>Testuser:</b>
+  <%= @step.testUser %>
+</p>
+
+<p>
+  <b>Testdepartment:</b>
+  <%= @step.testDepartment %>
+</p>
+
+<p>
+  <b>Linkedissue:</b>
+  <%= @step.linkedIssue %>
+</p>
+
+<p>
+  <b>Datetested:</b>
+  <%= @step.dateTested %>
+</p>
+
+<p>
+  <b>Script:</b>
+  <%= @step.script %>
+</p>
+
+
+<%= link_to 'Edit', edit_script_step_path(@step.script, @step) %> |
+<%= link_to 'Back', script_steps_path(@step.script) %>
